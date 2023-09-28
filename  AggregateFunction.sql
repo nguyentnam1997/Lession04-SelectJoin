@@ -4,7 +4,7 @@ select count(actor_id) as 'Count actor' from actor;
 -- 2. Xác định thời lượng dài nhất và ngắn nhất của các bộ phim trong bảng film
 select film_id, title, length from film where length = (select min(length) from film)
 or length = (select max(length) from film)
-order by length asc ;
+order by length;
 
 select min(length), max(length) from film;
 
